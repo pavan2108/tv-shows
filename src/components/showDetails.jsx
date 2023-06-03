@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+
 
 function ShowDetails() {
   const [show, setShow] = useState([]);
@@ -12,6 +15,13 @@ function ShowDetails() {
     const data = await response.json();
     setShow(data);
   };
+  const navigate = useNavigate();
+
+  const handleBookShow = (movieName) => {
+    navigate(`/book-show/${encodeURIComponent(movieName)}`);
+  };
+  
+
 
   useEffect(() => {
     fetchShowDetails();
@@ -27,9 +37,13 @@ function ShowDetails() {
       <div className='movie-details-content'>
         <h1>{show.name}</h1>
         <p>Genre: {show.genres ? show.genres.join(', ') : 'Unknown'}</p>
-      </div>
+      </div>    {/* Book show button */}
+      <button onClick={() => handleBookShow(show.name)}>Book Show</button>
+
+
     </div>
   );
 }
 
 export default ShowDetails;
+

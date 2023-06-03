@@ -1,0 +1,108 @@
+/* App.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .movie-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    width: 300px;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .movie-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .movie-card p {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* BookShow.css */
+  
+  .book-show {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .book-show h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .book-show form {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .book-show label {
+    display: grid;
+    gap: 5px;
+  }
+  
+  .book-show input[type="text"],
+  .book-show input[type="email"] {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .book-show button[type="submit"] {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .book-show button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* SearchBar.css */
+  
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
