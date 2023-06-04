@@ -62,21 +62,25 @@ function HomePage() {
         ))}
       </div>
 
-      {/* Display default shows */}
-      <div className="show-list-wrapper">
-        {defaultShows.map(show => (
-          <div key={show.id} className="show-list-card">
-            <img src={show.image?.medium} alt={show.name} />
-            <h3>Show Name: {show.name}</h3>
-            <p>Genre: {show.genres.join(', ')}</p>
-            <div className="home-button">
-              <Link to={`/shows/${show.id}`}>
-                <button>View Details</button>
-              </Link>
-            </div>
-          </div>
-        ))}
+
+    {/* Display default shows */}
+{searchedShows.length === 0 && (
+  <div className="show-list-wrapper">
+    {defaultShows.map(show => (
+      <div key={show.id} className="show-list-card">
+        <img src={show.image?.medium} alt={show.name} />
+        <h3>Show Name: {show.name}</h3>
+        <p>Genre: {show.genres.join(', ')}</p>
+        <div className="home-button">
+          <Link to={`/shows/${show.id}`}>
+            <button>View Details</button>
+          </Link>
+        </div>
       </div>
+    ))}
+  </div>
+)}
+
     </div>
   );
 }
